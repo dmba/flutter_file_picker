@@ -472,7 +472,8 @@ didPickDocumentsAtURLs:(NSArray<NSURL *> *)urls{
                 return;
             }
             
-            NSString * filename = url.lastPathComponent;
+            NSString * uuid = [[NSUUID UUID] UUIDString];
+            NSString * filename = [uuid stringByAppendingString: url.lastPathComponent];
             NSString * extension = [filename pathExtension];
             NSFileManager * fileManager = [[NSFileManager alloc] init];
             NSURL * cachedUrl;
