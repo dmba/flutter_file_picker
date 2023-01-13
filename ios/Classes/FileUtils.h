@@ -25,6 +25,7 @@ typedef NS_ENUM(NSInteger, MediaType) {
 + (MediaType) resolveMediaType:(NSString*)type;
 + (NSArray<NSDictionary*>*) resolveFileInfo:(NSArray<NSURL *> *)urls withData:(BOOL)loadData;
 + (NSURL*) exportMusicAsset:(NSString*)url withName: (NSString*)name;
++ (NSString*) resolveImageExtension:(NSString*)url;
 @end
 
 
